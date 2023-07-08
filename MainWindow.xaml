@@ -9,12 +9,19 @@
         Name="myWindow"
         Background="{Binding myBrush}">
     <Window.DataContext>
-        <local:MyViewModel />
+        <local:MyViewModel/>
     </Window.DataContext>
     <Window.InputBindings>
+        <KeyBinding Command="{Binding FontBold}"
+Gesture="Ctrl+1"/>
+        <KeyBinding Command="{Binding FontItalic}"
+Gesture="Ctrl+2"/>
+        <KeyBinding Command="{Binding FontSize15}"
+Gesture="Ctrl+3"/>
+        <KeyBinding Command="{Binding FontSize30}"
+Gesture="Ctrl+4"/>
         <KeyBinding Command="{Binding BlueCommand}"
-        Gesture="Ctrl+B"
-        />
+Gesture="Ctrl+B"/>
         <KeyBinding Command="{Binding GreenCommand}"
         Key="G"
         Modifiers="Ctrl"/>
@@ -22,4 +29,18 @@
         Key="R"
         Modifiers="Ctrl"/>
     </Window.InputBindings>
+    <Grid>
+        <TextBox Background="{Binding myBrush}" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Background="{Binding myBrush}" Content="Button" HorizontalAlignment="Left" Margin="133,160,0,0" VerticalAlignment="Top" Height="92" Width="119"/>
+        <CheckBox Background="{Binding myBrush}" Content="CheckBox" HorizontalAlignment="Left" Margin="552,199,0,0" VerticalAlignment="Top"/>
+        <RichTextBox Margin="340,311,0,0" FontFamily="{Binding Font}" FontSize="{Binding FontSize}" Foreground="{Binding myBrush}">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="fsdf123124qdgssgddffhgjfgfj"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+
+    </Grid>
 </Window>
