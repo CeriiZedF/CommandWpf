@@ -66,7 +66,7 @@ namespace CommandWpf
                         OnPropertyChanged("myBrush");
                     }
             }
-
+        #region Practice
         private ActionCommand blueCommand;
         public ActionCommand BlueCommand
         {
@@ -107,6 +107,7 @@ namespace CommandWpf
 
         }
 
+        #endregion
         private ActionCommand fontBold;
         public ActionCommand FontBold
         {
